@@ -1,0 +1,67 @@
+input{
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 10px;
+    width: 272px;
+    height: 40px;
+    padding: 8px 118px 8px 16px;
+
+    border-radius: 4px;
+    border: 1px solid #808080;
+    background: #FFF;
+
+    color: #2E2F42;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: 0.64px;
+}
+input:hover {
+
+}
+
+input .disable {
+
+}
+button {
+    cursor: pointer;
+    width: 75px;
+    height: 40px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(78, 117, 255, 1);
+
+    color:rgba(255, 255, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+}
+button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: #6C8CFF;
+   
+}
+button .disable {
+    color: #989898;
+    background-color: #CFCFCF;
+}
+.timer {}
+
+.field {}
+
+.value {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.label {
+    font-family: 'Montserrat', sans-serif;
+}
