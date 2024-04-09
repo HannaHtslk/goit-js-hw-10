@@ -59,7 +59,7 @@ const rejectNotification = {
         })
         .catch(() => {
             console.log(` ❌ Rejected promise in ${delay}ms`);
-            iziToast.success(rejectNotification);
+            iziToast.error(rejectNotification);
         })
     
 }
