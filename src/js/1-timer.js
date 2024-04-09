@@ -22,9 +22,11 @@ const iziToastOpt = {
   progressBarColor: 'rgba(255, 255, 255, 1)',
 
 }
+
 let userSelectedDate = null;
 const startButton = document.querySelector('[type="button"]');
 const timerElement = document.querySelector('.timer');
+const timerInput = document.querySelector('#datetime-picker');
 
 const options = {
   enableTime: true,
@@ -32,37 +34,47 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    userSelectedDate = selectedDates[0];
+    checkSelectedDate(selectedDates[0])
+  },
+};
+flatpickr("#datetime-picker", options);
+
+const checkSelectedDate = (selectedDates) => {
+  userSelectedDate = selectedDates;
     const currentDate = new Date();
     if (userSelectedDate <= currentDate) {
+      console.log(userSelectedDate)
       iziToast.error(iziToastOpt);
         startButton.disabled = true;
       } else {
         startButton.disabled = false;
       }
-  },
-};
-flatpickr("#datetime-picker", options);
-
+}
 
 
 startButton.addEventListener('click', () => {
   startButton.disabled = true;
-    countdownTimer();
+  countdownTimer();
+  
 });
 function countdownTimer() {
-  const timerUpdateInterval = 1000;
+  timerInput.setAttribute('disabled', true);
+
+
   const daysElement = timerElement.querySelector('[data-days]');
   const hoursElement = timerElement.querySelector('[data-hours]');
   const minutesElement = timerElement.querySelector('[data-minutes]');
   const secondsElement = timerElement.querySelector('[data-seconds]');
 
-  const timerInterval = setInterval(updateTimer, timerUpdateInterval);
+  const timerInterval = setInterval(updateTimer, 1000);
+
+  
 
      function updateTimer() {
-    const currentTime = new Date().getTime();
+       const currentTime = new Date().getTime();
+      //  console.log(currentTime);
     const timeDifference = userSelectedDate - currentTime;
-
+      //  console.log(timeDifference);
        if (timeDifference <= 0) {
          clearInterval(timerInterval);
          daysElement.textContent = '00';
