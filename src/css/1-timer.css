@@ -1,3 +1,10 @@
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
 input{
     font-family: 'Montserrat', sans-serif;
     margin-right: 10px;
@@ -9,7 +16,6 @@ input{
     background: #FFF;
 
     color: #2E2F42;
-        font-family: Montserrat;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
