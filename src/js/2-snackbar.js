@@ -1,7 +1,8 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-
+import iconError from '../img/bi_x-octagon.svg';
+import iconSuccess from '../img/bi_check2-circle.svg';
 
 const form = document.querySelector('form');
 const delayInput = document.querySelector('[type="number"]');
@@ -22,7 +23,7 @@ const rejectNotification = {
     titleSize: '16px',
     message: `Rejected promise in ${delay}ms`,
     messageColor: 'rgba(255, 255, 255, 1)',
-    iconUrl: '../img/bi_x-octagon.svg',
+    iconUrl: iconError,
     backgroundColor: '#EF4040',
     position: 'topRight',
 
@@ -34,7 +35,7 @@ const rejectNotification = {
     titleSize: '16px',
     message: `Fulfilled promise in ${delay}ms`,
     messageColor: 'rgba(255, 255, 255, 1)',
-    iconUrl: '../img/bi_check2-circle.svg' ,
+    iconUrl: iconSuccess,
     backgroundColor: '#59A10D',
     position: 'topRight',
 
